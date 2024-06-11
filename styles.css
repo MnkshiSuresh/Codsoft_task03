@@ -1,0 +1,81 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #218aa4;
+    margin: 0;
+}
+
+.calculator {
+    width:360px;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    border: 1px solid #022b50;;
+    border-radius: 10px;
+    padding: 21px;
+    background-color: #123350;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-screen {
+    grid-row: 1 / 2;
+    background-color: #e9e4e4;
+    color: #000000;
+    text-align: right;
+    padding: 20px;
+    font-size: 2.5rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.key {
+    height: 60px;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #b7b7b7;
+    color: #0e0e0e;
+    cursor: pointer;
+}
+
+.key.operator {
+    background-color: #f5913e;
+    color: white;
+}
+
+.key.equal-sign {
+    background-color: #4caf50;
+    color: white;
+    grid-column: span 2;
+}
+
+.key.all-clear {
+    background-color: #f34d3a;
+    color: white;
+    grid-column: span 2;
+}
+.key:hover {
+    transform: scale(1.027);
+    background-color: #d1d1d1;
+}
+
+/* Specific hover effects for operators and special keys */
+.key.operator:hover {
+    background-color: #e07a28;
+}
+
+.key.equal-sign:hover {
+    background-color: #388e3c;
+}
+
+.key.all-clear:hover {
+    background-color: #d32f2f;
+}
